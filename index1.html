@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+<head>
+    <title>Praveen Pourush | Home</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <script type="text/javascript" src="jquery.min.js"></script>
+
+    <style type="text/css">
+    
+    body {
+        background-color: #e3e9ed;
+        background-image: url(./images/scenery.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin:0;
+        padding: 0;
+    }
+    #header {
+        position:fixed;
+        z-index:100;
+        width:100%;
+        height:50px;
+        /*background-image: url(./images/background_top.jpg);*/
+
+        /*background: rgba(59,89,180,0.7);*/
+
+    }
+
+    #name {
+        font-family: "Times New Roman", Times, serif;
+        color: #20618a;
+        margin-top:20px;
+        font-size: 1.4em;
+    }
+
+    #toprightdiv {
+        float:right;
+        width:495px;
+    }
+
+    #toprightdiv li {
+        list-style: none;
+        float:left;
+        color: #ffffff;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: -20px;
+        font-size: 1.2em;
+        border-right:2px solid #ffffff;
+        border-top:2px solid #ffffff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .links:hover {
+        color: #307da3;
+        background-color: #ffffff;
+        font-size: 1.3em;
+    }
+
+    #icon {
+        float:left;
+        width:45px;
+        margin-left: 5px;
+    }
+
+    #aboutme {
+        margin-top: 25px;
+        float:left;
+    }
+
+    #icon:hover {
+        width:60px;
+    }
+
+    .circle {
+        position:absolute;
+        height:300px;
+        width:300px;
+        border-radius: 150px;
+        background-color: #000000;
+        text-align: center;
+        color: #ffffff;
+        background: rgba(0,0,0,0.5);
+    }
+
+/*    #circle1:hover {
+        opacity:1;
+        margin-top:-1000px;
+    }
+*/
+    #circle1 {
+        margin-top: 80px;
+        margin-right: 110px;
+        margin-bottom: 50px;
+        margin-left: 100px;
+    }
+
+    #circle2 {
+        margin-top:80px;
+        margin-left: 550px;
+    }
+
+    #circle3 {
+        
+        margin-top:80px;
+        margin-left: 1000px;
+    }
+
+    #circle4 {
+        margin-top: 450px;
+        margin-left:315px;
+    }
+    #circle5 {
+        
+        margin-top:450px;
+        margin-left:765px;
+    }
+
+    #text {
+        font-size: 17px;
+    }
+
+    #button {
+        height:20px;
+        width:100px;
+        background: rgba(0,0,0,0.7);
+        display:inline-block;
+        padding-top: 3px;
+        cursor:pointer;
+    }
+
+    #info {
+        padding-left: 10px;
+        margin-left: 270px;
+        font-size: 22px;
+        color: #ffffff;
+        background: rgba(0,0,0,0.7);
+        width:420px;
+    }
+
+    </style>    
+</head>
+
+<body>
+
+<div id = "header">
+    <img src=".\images\icon.jpg" id="icon" >
+        <a href="#aboutme" id = "aboutme" class="links">About Me!</a>
+    </img>
+    <div id = "info"> 
+        Click the circles to magically expand/contract!
+    </div>
+    <div id = "toprightdiv">
+        <ul>
+            <li><a href="#" class="links">Home</a></li>
+            <li><a href="http://www.google.com/" class="links">Projects</a></li>
+            <li><a href="http://www.google.com/" class="links">Resume</a></li>
+            <li style="border-right:none"><a href="http://www.google.com/" class="links">Contact Me</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id = "circle1" class = "circle">
+    <div id = "text">
+        <p><strong>About Me!</strong></p>
+        I am a B.Tech IT undergraduate</br> from IIITA. I love to solve</br> problems through my code.Currently,</br> I am in my sophomore year in College. </br>
+            "Whenever there is repetition, I love to automate it!" </br></br>
+        I kill my most of the time coding and programming stuffs.</br></br>
+        <div id = "button">Read more!</div></br>
+        <span id = "expand"> 
+        I love to watch scientific documentaries and listening to music.</br> I am also an average singer but a good dancer! </br>
+        Straight forward, compassionate, co-operative, ambivert are </br>some words of token to describe my personality!</br>
+        </br>I am from Faizabad, Uttar Pradesh. A city adjacent to the holy</br> city Ayodhya! Yes..u guessed it right. It is the place</br> where Lord Ram belongs!</br>
+        </span>
+    </div>  
+</div>
+<div id = "circle2" class = "circle"></div>
+<div id = "circle3" class = "circle"></div>
+<div id = "circle4" class = "circle"></div>
+<div id = "circle5" class = "circle"></div>
+
+<script type="text/javascript">
+    
+    $('#expand').hide();
+
+
+    $("#aboutme").click(function() {
+        if( $("#circle1").css("height") == "300px") {
+            $('#button').hide(1500);
+            $("#circle2").hide(1500);
+            $("#circle3").hide(1500);
+            $("#circle4").hide(1500);
+            $("#circle5").hide(1500);
+            $("#circle1").animate( {
+                height:"500px",
+                width:"500px",
+                marginLeft:"430px",
+                marginTop:"80px",
+                borderRadius:"250px"
+            },1500);
+            $('#expand').show(500);
+        
+        } else {    
+            $('#expand').hide(500);
+            $('#button').show(1500);
+            $("#circle2").show(1500);
+            $("#circle3").show(1500);
+            $("#circle4").show(1500);
+            $("#circle5").show(1500);
+            $("#circle1").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"100px",
+                marginTop:"80px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+
+    $("#circle1").click(function() {
+        if( $("#circle1").css("height") == "300px") {
+            $('#button').hide(1500);
+            $("#circle2").hide(1500);
+            $("#circle3").hide(1500);
+            $("#circle4").hide(1500);
+            $("#circle5").hide(1500);
+            $("#circle1").animate( {
+                height:"500px",
+                width:"500px",
+                marginLeft:"430px",
+                marginTop:"80px",
+                borderRadius:"250px"
+            },1500);
+            $('#expand').show(500);
+        
+        } else {    
+            $('#expand').hide(500);
+            $('#button').show(1500);
+            $("#circle2").show(1500);
+            $("#circle3").show(1500);
+            $("#circle4").show(1500);
+            $("#circle5").show(1500);
+            $("#circle1").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"100px",
+                marginTop:"80px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+
+    $("#circle2").click(function() {
+        if( $("#circle2").css("height") == "300px") {
+
+           // $("#circle1").css("visibility", "hidden");
+            $("#circle1").hide(1500);
+            $("#circle3").hide(1500);
+            $("#circle4").hide(1500);
+            $("#circle5").hide(1500);
+            
+            $("#circle2").animate( {
+                marginTop: "80px",    
+                height:"500px",
+                width:"500px",
+                marginLeft:"450px",
+                borderRadius:"250px"
+            },1500);
+        } else {
+
+           // $("#circle1").css("visibility", "visible");
+            $('#circle1').show(1500);
+            $("#circle5").show(1500);
+            $("#circle3").show(1500);
+            $("#circle4").show(1500);
+            $("#circle2").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"550px",
+                marginTop:"80px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+
+    $("#circle3").click(function() {
+        if( $("#circle3").css("height") == "300px") {
+
+           // $("#circle1").css("visibility", "hidden");
+            $("#circle1").hide(1500);
+            $("#circle2").hide(1500);
+            $("#circle4").hide(1500);
+            $("#circle5").hide(1500);
+            
+            $("#circle3").animate( {
+                marginTop: "80px",    
+                height:"500px",
+                width:"500px",
+                marginLeft:"450px",
+                borderRadius:"250px"
+            },1500);
+        } else {
+
+           // $("#circle1").css("visibility", "visible");
+            $('#circle1').show(1500);
+            $("#circle5").show(1500);
+            $("#circle2").show(1500);
+            $("#circle4").show(1500);
+            $("#circle3").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"1000px",
+                marginTop:"80px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+    
+    $("#circle4").click(function() {
+        if( $("#circle4").css("height") == "300px") {
+
+           // $("#circle1").css("visibility", "hidden");
+            $("#circle1").hide(1500);
+            $("#circle3").hide(1500);
+            $("#circle2").hide(1500);
+            $("#circle5").hide(1500);
+            
+            $("#circle4").animate( {
+                marginTop: "80px",    
+                height:"500px",
+                width:"500px",
+                marginLeft:"450px",
+                borderRadius:"250px"
+            },1500);
+        } else {
+
+           // $("#circle1").css("visibility", "visible");
+            $('#circle1').show(1500);
+            $("#circle5").show(1500);
+            $("#circle3").show(1500);
+            $("#circle2").show(1500);
+            $("#circle4").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"315px",
+                marginTop:"450px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+
+    
+    $("#circle5").click(function() {
+        if( $("#circle5").css("height") == "300px") {
+
+           // $("#circle1").css("visibility", "hidden");
+
+            $("#circle1").hide(1500);
+            $("#circle3").hide(1500);
+            $("#circle4").hide(1500);
+            $("#circle2").hide(1500);
+            
+            $("#circle5").animate( {
+                marginTop: "80px",    
+                height:"500px",
+                width:"500px",
+                marginLeft:"450px",
+                borderRadius:"250px"
+            },1500);
+        } else {
+
+           // $("#circle1").css("visibility", "visible");
+            $('#circle1').show(1500);
+            $("#circle2").show(1500);
+            $("#circle3").show(1500);
+            $("#circle4").show(1500);
+            $("#circle5").animate( {
+                height:"300px",
+                width:"300px",
+                marginLeft:"765px",
+                marginTop:"450px",
+                borderRadius:"150px"
+            },1500);      
+        }
+    });
+
+</script>
+
+
+</body>
+</html>

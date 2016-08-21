@@ -1,0 +1,198 @@
+<!doctype html>
+<html>
+<head>
+    <title>Praveen Pourush | Home</title>
+
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+    <style type="text/css">
+    
+    body {
+        background-color: #e3e9ed;
+        //background-image: url(./images/background-side.jpg);
+        margin:0;
+        padding: 0;
+    }
+
+    #page1 {
+        background-image: url(./images/background.jpg);
+        margin-left: 200px;
+        margin-right : 200px;
+        height:575px;
+        margin-top : 0;
+        border-radius : 10px;
+    }
+
+    #page2 {
+        background-image: url(./images/background-bottom.jpg);
+        margin-left: 200px;
+        margin-right : 200px;
+        height: 900px;
+        margin-top : 0px;
+        padding-top: 0px;
+        border-radius : 10px;
+    }
+
+    #header {
+        width:100%;
+        height:50px;
+        background-image: url(./images/background_top.jpg);
+        //background-size: cover;
+        border-top: 2px solid #2075a0;
+        border-bottom: 2px solid #2075a0;
+    }
+
+    #name {
+        font-family: "Times New Roman", Times, serif;
+        color: #20618a;
+        margin-top:20px;
+        font-size: 1.4em;
+    }
+
+    #slideshow {
+        //background-color:#cbdeea;
+        margin-top: 60px;
+    }
+
+    .slide {
+        width:100%;
+        height:400px;
+        display: none;
+    }
+
+    #toprightdiv {
+        float:right;
+        width:495px;
+    }
+
+    #toprightdiv li {
+        list-style: none;
+        float:left;
+        color: #ffffff;
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-top: -3px;
+        font-size: 1.2em;
+        border-right:2px solid #ffffff;
+    }
+
+    .links {
+        text-decoration: none;
+        color: #ffffff;
+    }
+
+    .links:hover {
+        color: #307da3;
+        background-color: #e8e8e8;
+        font-size: 1.3em;
+    }
+
+    #icon {
+        width:45px;
+        margin-left: 5px;
+    }
+
+    #icon:hover {
+        width:60px;
+    }
+
+    #text1 {
+        font-weight: bold;
+        font-family: "Times New Roman", Times, serif;
+        font-size: 2em;
+        padding-top: 50px;
+        width:250px;
+        border-bottom:2px solid #7B7B7A;
+    }
+
+    #img1 {
+        margin-top: 20px;
+    }
+
+    #block-1 {
+        float:left;
+        width:300px;
+        height:400px;
+        margin-left: 100px;
+        /*background-color: #ea3131;*/ 
+    }
+    #block-2 {
+        margin-top:165px;
+        margin-right:50px;
+        float:right;
+        height:150px;
+        width:460px;
+        font-size: 1.3em;
+        color:#20618a;
+    }
+
+    </style>    
+</head>
+
+<body>
+<div id = "page1">
+
+    <div id = "header">
+        <img src=".\images\icon.jpg" id="icon" >
+            <a href="#aboutme" class="links">About Me!</a>
+        </img>
+        <div id = "toprightdiv">
+            <ul>
+                <li><a href="#" class="links">Home</a></li>
+                <li><a href="http://www.google.com/" class="links">Projects</a></li>
+                <li><a href="http://www.google.com/" class="links">Resume</a></li>
+                <li style="border-right:none"><a href="http://www.google.com/" class="links">Contact Me</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id = "slideshow" >
+        <img class="slide w3-animate-right" src=".\images\slide1.jpg"></img>
+        <img class="slide w3-animate-left" src=".\images\slide2.jpg"></img>
+        <img class="slide w3-animate-right" src=".\images\slide3.jpg"></img>
+        <img class="slide w3-animate-left" src=".\images\slide4.jpg"></img>
+    </div>
+</div>
+
+<a name = "aboutme"/>
+<div id="page2">
+    <div id = "block-1">
+        <div id = "text1">Hey there!</div>
+        <div id = "name">It's me Praveen Pourush!</div>
+        <img src=".\images\img1.jpg" id = "img1" height="250px"></img>
+
+    </div>
+
+    <div id = "block-2">I am a B.Tech IT undergraduate from IIITA. I love to solve problems through my code. </br></br>
+            "Whenever there is repetition, I love to automate it!" </br></br>
+    I kill my most of the time coding and programming stuffs.
+    Currently, I am in my sophomore year in College.
+    </div>  
+</div>
+
+<script type="text/javascript">
+
+    var myIndex = 0;
+    slider();
+
+    function slider() {
+    var i;
+    var x = document.getElementsByClassName("slide");
+    for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}
+    x[myIndex-1].style.display = "block";
+    setTimeout(slider, 3000);
+}
+
+
+</script>
+
+
+</body>
+</html>
